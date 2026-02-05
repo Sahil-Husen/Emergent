@@ -1,0 +1,168 @@
+{
+  "identity": {
+    "persona": "E1",
+    "role": "Creative Designer (Top 1%)",
+    "principles": [
+      "Fusion over Imitation",
+      "Emotion First",
+      "Content is King",
+      "Zoom In",
+      "Negative Space",
+      "Contrast"
+    ],
+    "anti_patterns": [
+      "Purple/Teal for CTA",
+      "Inter everywhere (Headings must be distinct)",
+      "Center-Everything Disease",
+      "Gradient Overload (>20%)",
+      "Generic 'SaaS Blue'",
+      "Default Vercel/Stripe look"
+    ]
+  },
+  "typography": {
+    "headings": {
+      "font_family": "Manrope, sans-serif",
+      "weights": ["600", "800"],
+      "tracking": "tight",
+      "usage": "Main headings, section titles, hero text"
+    },
+    "body": {
+      "font_family": "Inter, sans-serif",
+      "weights": ["400", "500"],
+      "tracking": "normal",
+      "usage": "Paragraphs, UI labels, data tables"
+    },
+    "mono": {
+      "font_family": "JetBrains Mono, monospace",
+      "usage": "Code snippets, ID numbers, technical data"
+    },
+    "rules": [
+      "Headlines > 32px must use tracking-tight",
+      "Overlines/Labels must be Uppercase + Tiny + Wide Spacing (tracking-[0.2em])",
+      "Line height: tight for headers, relaxed for body"
+    ]
+  },
+  "colors": {
+    "palette_name": "Modern Academic (Archetype 4 + 1)",
+    "primary": {
+      "name": "AMU Heritage Green",
+      "hex": "#064E3B",
+      "tailwind": "emerald-900",
+      "usage": "Primary buttons, active states, key branding elements"
+    },
+    "secondary": {
+      "name": "Campus Stone",
+      "hex": "#F5F5F4",
+      "tailwind": "stone-100",
+      "usage": "Backgrounds, cards, subtle sections"
+    },
+    "accent": {
+      "name": "Crimson Alert",
+      "hex": "#BE123C",
+      "tailwind": "rose-700",
+      "usage": "Destructive actions, important alerts, badges"
+    },
+    "neutral": {
+      "base": "#1C1917",
+      "tailwind": "stone-900",
+      "usage": "Text, strong borders"
+    },
+    "forbidden": [
+      "#7351B7",
+      "#1B93A4"
+    ],
+    "theme_strategy": "Hybrid (Light Mode default for Dashboards, Dark/High-Contrast for Marketing)",
+    "gradients": "Avoid full-screen gradients. Use subtle noise textures or 'Tracing Beam' effects."
+  },
+  "layout": {
+    "spacing_system": {
+      "scale": ["p-1", "p-2", "p-4", "p-6", "p-8", "p-12", "p-16", "p-20", "p-24", "p-32"],
+      "philosophy": "Generous spacing (2-3x normal). Containers with borders MUST have internal padding (p-6/p-8)."
+    },
+    "grids": {
+      "student_dashboard": {
+        "mode": "Tetris Grid (Mode A)",
+        "columns": "grid-cols-1 md:grid-cols-8 lg:grid-cols-12",
+        "gap": "gap-6",
+        "rules": "Asymmetry, visual tension. Mix Hero (col-span-8), Square (col-span-4), Tall (row-span-2)."
+      },
+      "admin_dashboard": {
+        "mode": "High Density Grid (Mode B)",
+        "columns": "grid-cols-1 md:grid-cols-3 lg:grid-cols-4",
+        "gap": "gap-4",
+        "rules": "Density, data correlation. Every pixel utilized. No jagged bottoms."
+      }
+    },
+    "alignment": {
+      "mobile": "Always start with grid-cols-1",
+      "optical": "Add extra padding to visually center text blocks next to round icons"
+    }
+  },
+  "components": {
+    "strategy": "Hybrid",
+    "marketing": "Custom HTML + Tailwind (No Shadcn Cards). Use raw div/section for overlapping/asymmetry.",
+    "dashboard": "Shadcn/UI (Heavily Customized). Remove 'Vercel-look'. Use 'Cardless' or 'Sharp Edge' styles.",
+    "interactive": {
+      "buttons": "Pill-shaped or Sharp. Hover: lift (-translate-y-1) + shadow-lg.",
+      "inputs": "Shadcn Input. Focus: Ring-2 ring-primary/20.",
+      "cards": "Flat background, 1px subtle border, no shadow by default. Hover: shadow-md.",
+      "toasts": "Use Sonner (src/components/ui/sonner.tsx)."
+    },
+    "visual_enhancers": [
+      "Tracing Beam Borders (for active cards)",
+      "Glassmorphism (Sticky Headers: backdrop-blur-xl + backdrop-saturate-150)",
+      "Grain/Noise Texture (Backgrounds)",
+      "Micro-interactions (Hover, Focus, Active)"
+    ]
+  },
+  "images": {
+    "hero_student": {
+      "url": "https://images.unsplash.com/photo-1758270705482-cee87ea98738?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjAzMzJ8MHwxfHNlYXJjaHwzfHx1bml2ZXJzaXR5JTIwc3R1ZGVudHMlMjBzdHVkeWluZyUyMGNhbXB1c3xlbnwwfHx8fDE3NzAzMDIyMzh8MA&ixlib=rb-4.1.0&q=85",
+      "alt": "Students collaborating in lecture hall",
+      "category": "Hero"
+    },
+    "campus_life": [
+      {
+        "url": "https://images.unsplash.com/photo-1625640776489-4186592c6f00?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjAzMzJ8MHwxfHNlYXJjaHw0fHx1bml2ZXJzaXR5JTIwc3R1ZGVudHMlMjBzdHVkeWluZyUyMGNhbXB1c3xlbnwwfHx8fDE3NzAzMDIyMzh8MA&ixlib=rb-4.1.0&q=85",
+        "alt": "Campus pathway",
+        "category": "Atmosphere"
+      },
+      {
+        "url": "https://images.unsplash.com/photo-1610070835951-156b6921281d?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NTYxOTF8MHwxfHNlYXJjaHwyfHxkaXZlcnNlJTIwZ3JvdXAlMjBvZiUyMHN0dWRlbnRzJTIwdGFsa2luZ3xlbnwwfHx8fDE3NzAzMDIyNDF8MA&ixlib=rb-4.1.0&q=85",
+        "alt": "Students on grass",
+        "category": "Social"
+      }
+    ],
+    "architecture": [
+      {
+        "url": "https://images.unsplash.com/photo-1685456891912-c09f9cd252eb?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NDk1NzZ8MHwxfHNlYXJjaHwzfHxtb2Rlcm4lMjB1bml2ZXJzaXR5JTIwYnVpbGRpbmclMjBhcmNoaXRlY3R1cmV8ZW58MHx8fHwxNzcwMzAyMjQwfDA&ixlib=rb-4.1.0&q=85",
+        "alt": "University building with clock",
+        "category": "Institutional"
+      }
+    ]
+  },
+  "motion": {
+    "library": "Framer Motion",
+    "rules": [
+      "No 'transition: all'",
+      "Use specific transitions: 'transition: transform 0.2s ease, opacity 0.2s ease'",
+      "Staggered entrance for lists",
+      "Respect prefers-reduced-motion"
+    ]
+  },
+  "accessibility": {
+    "contrast": "APCA / WCAG AA (4.5:1 for normal text)",
+    "interactive": "Focus states must have higher contrast than default",
+    "testing": "All interactive elements must have data-testid attribute"
+  },
+  "universal_guidelines": [
+    "Avoid 'AI slop' (generic centered layouts, uniform styling)",
+    "Create depth through layered design (z-index)",
+    "Use glass-morphism with 12-24px blur",
+    "NEVER use AI assistant emojis (🤖, 🧠, etc.)",
+    "Main agent must use provided image URLs, NO placeholders",
+    "Components must use named exports",
+    "Pages must use default exports"
+  ],
+  "instructions_to_main_agent": "You are building a Student Life-Cycle Database Management System. Use the 'Modern Academic' theme. Implement the Student Dashboard with a 'Tetris' Bento grid for engagement. Implement Admin/Faculty dashboards with 'High Density' grids for efficiency. Use the provided image URLs for the landing page and dashboard widgets. Strictly follow the spacing and typography rules."
+}
