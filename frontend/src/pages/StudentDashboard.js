@@ -5,6 +5,10 @@ import axiosInstance from '../utils/axios';
 import { BookOpen, Calendar, DollarSign, Home, GraduationCap, TrendingUp, Clock } from 'lucide-react';
 import { motion } from 'framer-motion';
 
+// import { useNavigate } from "react-router-dom";
+// const navigate = useNavigate();
+
+
 export const StudentDashboard = () => {
   const { user } = useAuth();
   const [enrollments, setEnrollments] = useState([]);
@@ -19,7 +23,7 @@ export const StudentDashboard = () => {
   const fetchData = async () => {
     try {
       const [enrollRes, feeRes] = await Promise.all([
-        axiosInstance.get('/enrollments'),
+        axiosInstance.get('/enrollments'),  
         axiosInstance.get('/fees')
       ]);
       setEnrollments(enrollRes.data);
